@@ -1,5 +1,5 @@
 ---
-
+const pageTitle = 'Pagina de Incio'
 ---
 
 <html lang="en">
@@ -7,7 +7,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Tutorial</title>
+		<title>{ pageTitle }</title>
 	</head>
 	<body>
 		<div>
@@ -16,7 +16,7 @@
 			<a href="/blog">Blog</a>
 		</div>
 
-		<h1>Astro Tutorial</h1>
+		<h1>{ pageTitle }</h1>
 		<p>Este es el index</p>
 	</body>
 </html>

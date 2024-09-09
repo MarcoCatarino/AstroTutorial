@@ -1,5 +1,19 @@
 ---
+const pageTitle = 'Sobre Mi'
 
+const identify = {
+	firstName: 'Marco',
+	country: 'Mexico',
+	occupation: 'Estudiante',
+	hobbies: ['Bailar', 'Comer', 'Coding', 'Dibujar', 'Americano'],
+};
+
+const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Typescript', 'Git'];
+
+const happy = true;
+const finished = false;
+const goal= 3;
+const goal2= 2;
 ---
 
 <html lang="en">
@@ -7,7 +21,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Tutorial</title>
+		<title>{ pageTitle }</title>
 	</head>
 	<body>
         <div>
@@ -16,8 +30,32 @@
 			<a href="/blog">Blog</a>
 		</div>
 
-		<h1>About</h1>
-        <h2>Marco y su travesia en aprender Astro</h2>
-        <p>Estoy aprendiendo conocimiento valioso por medio de la documentacion que ofrece Astro para aprender a usar este framework</p>
+		<h1>{ pageTitle }</h1>
+        <br>
+		<spam><b>Un poco sobre mi ...</b></spam>
+		<ul>
+			<li>Me llamo {identify.firstName}</li>
+			<li>Vivo en {identify.country} y soy {identify.occupation}</li>
+			{identify.hobbies.length >= 2 &&
+				<li>Dos de mis hobbies son: {identify.hobbies[0]}, {identify.hobbies[1]} y {identify.hobbies[2]}</li>
+			}
+		</ul>
+		
+		<spam><b>Mis habilidades son: </b></spam>
+		<ul>
+			{skills.map(skill =>
+				<li>{skill}</li>
+			)}
+		</ul>
+		
+		<spam><b>Mis habilidades son: </b></spam>
+		
+		{happy && <p>Estoy Feliz por aprender Astro</p>}
+		{!happy && <p>Estoy Feliz por aprender Astro</p>}
+
+		{finished && <p>He temrinado el tutorial de Astro</p>}
+		{!finished && <p>He temrinado el tutorial de Astro</p>}
+		
+		{goal === 3 ? <p>Mi objetiivo es temrinar en 3 dias</p> : <p>No cumpli mi obejtivo de 3 dias</p>}
 	</body>
 </html>

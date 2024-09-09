@@ -1,5 +1,5 @@
 ---
-
+const pageTitle = 'Mi Blog'
 ---
 
 <html lang="en">
@@ -7,7 +7,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Tutorial</title>
+		<title>{ pageTitle }</title>
 	</head>
 	<body>
         <div>
@@ -16,7 +16,13 @@
 			<a href="/blog">Blog</a>
 		</div>
 
-		<h1>Mi Blog</h1>
+		<h1>{ pageTitle }</h1>
         <p>Soy Marco Arturo y actualmente estudio la carrera de ing en software, y me llama la atencion aprender Astro para poder tenerlo como herramienta agil y eficiente.</p>
+
+		<ul>
+			<li><a href="/posts/post-1">Publicacion 1</a></li>
+			<li><a href="/posts/post-2">Publicacion 2</a></li>
+			<li><a href="/posts/post-3">Publicacion 3</a></li>
+		</ul>
 	</body>
 </html>
