@@ -1,4 +1,7 @@
 ---
+import Navigation from '@/components/Navigation.astro';
+import '@/styles/global.css'
+
 const pageTitle = 'Sobre Mi'
 
 const identify = {
@@ -13,7 +16,10 @@ const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Typescript', 'Git'];
 const happy = true;
 const finished = false;
 const goal= 3;
-const goal2= 2;
+
+const skillColor= 'blue';
+const fontWeight= 'bold';
+const textCase= 'uppercase';
 ---
 
 <html lang="en">
@@ -24,11 +30,7 @@ const goal2= 2;
 		<title>{ pageTitle }</title>
 	</head>
 	<body>
-        <div>
-			<a href="/">Incio</a>
-			<a href="/about">About</a>
-			<a href="/blog">Blog</a>
-		</div>
+        <Navigation />
 
 		<h1>{ pageTitle }</h1>
         <br>
@@ -44,12 +46,12 @@ const goal2= 2;
 		<spam><b>Mis habilidades son: </b></spam>
 		<ul>
 			{skills.map(skill =>
-				<li>{skill}</li>
+				<li class="skill">{skill}</li>
 			)}
 		</ul>
 		
 		<spam><b>Mis habilidades son: </b></spam>
-		
+
 		{happy && <p>Estoy Feliz por aprender Astro</p>}
 		{!happy && <p>Estoy Feliz por aprender Astro</p>}
 
@@ -59,3 +61,16 @@ const goal2= 2;
 		{goal === 3 ? <p>Mi objetiivo es temrinar en 3 dias</p> : <p>No cumpli mi obejtivo de 3 dias</p>}
 	</body>
 </html>
+
+<style define:vars={{ skillColor, fontWeight, textCase }}>
+	h1 {
+		color: purple;
+		font-size: 4rem;
+	}
+	.skill {
+		/* color: green; */
+		color: var(--skillColor);
+		font-weight: var(--fontWeight);
+		text-transform: var(--textCase);
+	}
+</style>

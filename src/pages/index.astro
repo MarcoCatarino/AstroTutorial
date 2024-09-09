@@ -1,4 +1,7 @@
 ---
+import '@/styles/global.css'
+import Navigation from "@/components/Navigation.astro"
+
 const pageTitle = 'Pagina de Incio'
 ---
 
@@ -10,11 +13,7 @@ const pageTitle = 'Pagina de Incio'
 		<title>{ pageTitle }</title>
 	</head>
 	<body>
-		<div>
-			<a href="/">Incio</a>
-			<a href="/about">About</a>
-			<a href="/blog">Blog</a>
-		</div>
+		<Navigation />
 
 		<h1>{ pageTitle }</h1>
 		<p>Este es el index</p>
