@@ -1,6 +1,7 @@
 ---
-title: Mi segunda publicación en el blog
-author: Alumno de Astro
+layout: "@/layouts/MarkdownPostLayout.astro"
+title: Mi segunda publicación en el blog POST
+author: Marco ~ Alumno de Astro
 description: "Después de aprender un poco de Astro, ¡no podía parar!"
 image:
   url: "https://docs.astro.build/assets/arc.webp"
