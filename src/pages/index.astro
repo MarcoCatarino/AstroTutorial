@@ -1,9 +1,21 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro"
+import Greeting from '@/components/Greeting'
+
 const pageTitle = 'Pagina Index'
 ---
 
 <BaseLayout pageTitle={pageTitle}>
+	<br>
+
 	<h2>Mi Subtitulo dentro del INDEX</h2>
+
+	<p>Este es cuando no se renderiza con el cliente</p>
+	<Greeting messages={ ['Hola', 'Buenos Dias', 'Como estas?', 'Que pedo, compa'] } />
+	
+	<br>
+
+	<p>Este es cuando es renderiza con el cliente</p>
+	<Greeting client:load messages={ ['Hola', 'Buenos Dias', 'Como estas?', 'Que pedo, compa'] } />
 </BaseLayout>
 
