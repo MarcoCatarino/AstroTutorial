@@ -1,5 +1,8 @@
 # Astro Starter Kit: Basics
 
+### Link Netlify
+https://app.netlify.com/sites/astro-tutorial-marcoc/deploys/66de37b8bedcb0000872d1c7
+
 ```sh
 npm create astro@latest -- --template basics
 ```
