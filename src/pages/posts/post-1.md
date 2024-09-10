@@ -7,7 +7,7 @@ author: Marco ~ Alumno de Astro
 image:
   url: "https://docs.astro.build/assets/full-logo-light.png"
   alt: "El logotipo completo de Astro."
-tags: ["astro", "exitos", "aprender en público"]
+tags: ["astro", "exitos", "aprender"]
 ---
 
 # Mi primera publicación en el blog (Marckdown)
